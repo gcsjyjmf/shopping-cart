@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name here">
+    <link rel="stylesheet" href="ACMEpurchase.css">
+    <title>ACME Customer Care Portal</title>
+</head>
+
+<body>
+    <header>
+        <h1>ACME Corporation</h1>
+        <div class="tagline">yes we deliver!</div>
+    </header>
+
+    <main>
+        <h2>Customer Invoice</h2>
+
+        <table class="invoice">
+            <tr>
+                <th class="invoiceheader">Item</th>
+                <th class="invoiceheader">Retail Cost</th>
+                <th class="invoiceheader">Discount</th>
+                <th class="invoiceheader">Total</th>
+            </tr>
+
+            <!-- HERE IS WHERE INVOICE ITEMS ARE LISTED -->
+            <tr>
+                <td></td>
+                <td class="centered"></td>
+                <td class="centered"></td>
+                <td class="centered"></td>
+            </tr>
+            <!-- THE FOLLOWING LINE IS ALWAYS PRESENT -->
+
+            <tr class="totalline">
+                <td colspan="3">Invoice total</td>
+                <td class="centered">$43.20</td>
+            </tr>
+        </table>
+
+
+        <div id="purchase">
+            <button id="submitorder">Purchase</button>
+        </div>
+
+        <hr>
+
+        <form action="ACMEpurchases.php" method="post">
+            <fieldset class="additem">
+                <legend>Add Item to Order</legend>
+                <select id="newitem">
+
+                    <!-- make a list of options using PHP and the 
+                    provided array of musical instruments. -->
+
+                </select>
+
+                <div class="itemdetails">
+                    <label for="item">Item:</label>
+                    <input type="text" name="item" id="item" disabled>
+                </div>
+                <div class="itemdetails">
+                    <label for="retail">Price:</label>
+                    <input type="text" name="retail" id="retail" disabled>
+                    <label for="discount">Discount:</label>
+                    <input type="text" name="discount" id="discount">
+                    <label for="total">Total:</label>
+                    <input type="text" name="total" id="total" disabled>
+                </div>
+
+                <div class="purchase">
+                    <button type="submit">Add to Invoice</button>
+                </div>
+
+                <p class="centered">
+                    Attention, all discounts will be verified by our software.
+                </p>
+
+            </fieldset>
+        </form>
+
+        <footer>ACME Coporation for all that you can scheme up!</footer>
+
+    </main>
+</body>
+
+</html>
